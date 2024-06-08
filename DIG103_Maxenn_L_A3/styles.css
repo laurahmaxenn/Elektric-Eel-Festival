@@ -1,0 +1,510 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 100px 50px;
+}
+
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35px;
+  right: 50px;
+  top: 30px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 100;
+}
+
+.menu-bar {
+  position: fixed;
+  display: flex;
+  height: 35px;
+  right: 100px;
+  top: 30px;
+  cursor: pointer;
+  gap: 50px;
+}
+
+.burger-menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  inset: 0;
+  background-color: #000000d1;
+}
+
+.burger-bar {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.menu-bar-button {
+  font-weight: 800;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  align-self: center;
+  border-radius: 5px;
+  color: #000000d1;
+}
+
+.logo {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 50px;
+  top: 30px;
+  font-size: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 180px;
+  height: 150px;
+}
+
+.menu .line {
+  width: 46px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(173 173 173 / 80%);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup>*,
+.popup>*>*,
+.popup>*>*>* {
+  color: black;
+}
+
+.buy-tickets {
+  background-color: lightgreen;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+/* When the mousing  */
+.buy-tickets:hover {
+  background-color: green;
+}
+
+/* When mouse is clicking */
+.buy-tickets:active {
+  background-color: darkgreen;
+}
+
+.card {
+  width: 600px;
+  height: 180px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close {
+  cursor: pointer;
+  position: fixed;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+}
+
+.cross:before,
+.cross:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: black;
+}
+
+.cross-menu:before,
+.cross-menu:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: white;
+}
+
+.cross:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: unset;
+}
+
+section.hero {
+  background: url("../assets/images/antoine-j-A_0C42zmz1Q-unsplash.jpg") bottom center no-repeat;
+  background-position: center bottom;
+  height: 60vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.hero>.hero-title {
+  text-align: center;
+  font-size: 120px;
+  font-weight: 800;
+}
+
+section.hero>h3 {
+  text-align: center;
+  margin-top: -20px;
+  font-size: 25px;
+}
+
+.buy-banner {
+  background-color: black;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buy-banner>.main-cta {
+  margin: 0 auto;
+}
+
+.buy-banner>.main-cta>button {
+  border-radius: 20px;
+  background-color: green;
+  padding: 15px 100px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+
+.buy-banner>.main-cta>button>p {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+section.artists {
+  background: url("../assets/images/Robah\ Whrume.jpg") bottom center no-repeat;
+  background-position: center bottom;
+  /* height: 60vh; */
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section.artists>.feature-artist {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.artists>.feature-artist>.artist-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+section.artists>.feature-artist>.artist-card>h2 {
+  font-size: 68px;
+}
+
+section.artists>.feature-artist>.artist-card>h3 {
+  font-size: 48px;
+}
+
+section.artists>.timeline {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 45px;
+  padding-top: 40px;
+}
+
+.location-card {
+  /* height: 50px; */
+  background-color: #616161;
+  padding: 0px 30px;
+  /* width: 200px; */
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  margin-bottom: 84px;
+}
+
+.location-card>* {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.location-card>.location {
+  font-size: 50px;
+}
+
+.location-card>.dates {
+  font-size: 20px;
+}
+
+section.genres {
+  background: url("../assets/images/anastasiia-ruan-8w_JshgzTjY-unsplash.jpg") bottom center no-repeat;
+  background-position: center bottom;
+  /* height: 60vh; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section.genres>.genre-row {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+section.genres>.genre-row>.music-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.genres>.genre-row>.music-card>.player {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.genres>.genre-row>.music-card>.player>.play-circle {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section.genres>.genre-row>.music-card>.player>.play-circle>.play-triangle {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  transform: rotate(45deg) translate(-10px, 10px);
+}
+
+section.genres>.genre-row>.music-card>.player>.play-circle>.play-triangle-offset {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  transform: translateX(calc(-50% - 10px));
+}
+
+section.socials {
+  padding: 0;
+  position: relative;
+}
+
+section.socials>.background-image {
+  /* Set the position to absolute to position the divs relative to the section */
+  position: absolute;
+  /* Set both divs to cover 50% of the height of the section */
+  height: 50%;
+  /* Set the width to cover the entire width of the section */
+  width: 100%;
+  /* Set any additional styling you want for the background divs */
+  background-size: cover;
+  z-index: -1;
+}
+
+section.socials>.background-image.social-bg-1 {
+  position: absolute;
+  background-image: url("../assets/images/raphael-schaller-zbUvPw1wUIw-unsplash.jpg");
+  /* Set the position to cover the top 50% of the section */
+  top: 0;
+  background-position: 0px -600px;
+  background-size: cover;
+}
+
+section.socials>.background-image.social-bg-2 {
+  position: absolute;
+  height: 50%;
+  background-image: url("../assets/images/amir-toossi-w9WO8txR7Uk-unsplash.jpg");
+  /* Set the position to cover the top 50% of the section */
+  bottom: 0;
+  background-position: 0px -1400px;
+  background-size: cover;
+}
+
+section.socials>.social-footer {
+  padding: 20px 0;
+  border-radius: 30px;
+  position: absolute;
+  height: 40px;
+  bottom: 20px;
+  right: calc(50% - 250px);
+  width: 400px;
+  height: min-content;
+  display: flex;
+  justify-content: space-around;
+}
+
+section.socials>.social-footer>svg>path {
+  height: 60px;
+  width: 40px;
+  fill: white;
+  cursor: pointer;
+}
+
+.reversed-row {
+  flex-direction: row-reverse;
+}
+
+.form-card {
+  padding: 50px;
+  background-color: #8b8b8bf2;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.buttons {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+input {
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  color: black;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column;
+}

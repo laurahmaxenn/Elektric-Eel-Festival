@@ -1,0 +1,62 @@
+@media only screen and (max-width: 1440px) {
+    .menu {
+        display: flex;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .artist-card {
+        height: 150px !important;
+        width: 150px !important;
+    }
+
+
+    @media only screen and (max-width: 1000px) {
+
+        section.hero>h3 {
+            margin-top: 10px;
+        }
+
+        section.genres {
+            display: none;
+        }
+
+        section.artists {
+            flex-direction: column;
+        }
+
+        .location-card>.location {
+            font-size: 28px;
+        }
+
+        .location-card>.dates {
+            font-size: 12px;
+        }
+
+        .form-card {
+            width: unset;
+        }
+
+        section.hero>.hero-title {
+            font-size: 50px;
+        }
+
+        section.socials>.social-footer {
+            max-width: 100vw;
+            right: unset;
+        }
+
+        .logo {
+            width: 90px;
+            left: 20px;
+            top: 10px;
+        }
+
+        section.artists>.feature-artist>.artist-card>h3 {
+            font-size: 26px;
+        }
+    }
+
+}
